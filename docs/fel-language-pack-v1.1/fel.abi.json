@@ -1,0 +1,74 @@
+{
+  "id": "asx://language/fel/v1.1",
+  "schema": "kuhul://schema/fel/v1.1",
+  "canonicalization": {
+    "utf8": true,
+    "json_separators": ",:",
+    "top_level_key_order": [
+      "v",
+      "tick",
+      "type",
+      "fold",
+      "id",
+      "ref",
+      "payload",
+      "key",
+      "value",
+      "patch",
+      "lane",
+      "root",
+      "source",
+      "policy_hash",
+      "meta_hash",
+      "abi_hash",
+      "prev"
+    ],
+    "nested_object_keys": "sorted_lex"
+  },
+  "laws": {
+    "fold_map": [
+      "⟁AUTH_FOLD⟁",
+      "⟁CODE_FOLD⟁",
+      "⟁COMPUTE_FOLD⟁",
+      "⟁CONTROL_FOLD⟁",
+      "⟁DATA_FOLD⟁",
+      "⟁DB_FOLD⟁",
+      "⟁EVENTS_FOLD⟁",
+      "⟁META_FOLD⟁",
+      "⟁NETWORK_FOLD⟁",
+      "⟁PATTERN_FOLD⟁",
+      "⟁SPACE_FOLD⟁",
+      "⟁STATE_FOLD⟁",
+      "⟁STORAGE_FOLD⟁",
+      "⟁TIME_FOLD⟁",
+      "⟁UI_FOLD⟁"
+    ],
+    "fold_to_lane": {
+      "⟁AUTH_FOLD⟁": "DICT",
+      "⟁CODE_FOLD⟁": "EDGE",
+      "⟁COMPUTE_FOLD⟁": "BATCH",
+      "⟁CONTROL_FOLD⟁": "EDGE",
+      "⟁DATA_FOLD⟁": "DICT",
+      "⟁DB_FOLD⟁": "FIELD",
+      "⟁EVENTS_FOLD⟁": "LANE",
+      "⟁META_FOLD⟁": "DICT",
+      "⟁NETWORK_FOLD⟁": "EDGE",
+      "⟁PATTERN_FOLD⟁": "DICT",
+      "⟁SPACE_FOLD⟁": "EDGE",
+      "⟁STATE_FOLD⟁": "FIELD",
+      "⟁STORAGE_FOLD⟁": "FIELD",
+      "⟁TIME_FOLD⟁": "LANE",
+      "⟁UI_FOLD⟁": "LANE"
+    },
+    "type_fold_rules": {
+      "set": "⟁STATE_FOLD⟁",
+      "delta": "⟁STATE_FOLD⟁",
+      "seal": "⟁STORAGE_FOLD⟁",
+      "attest": "⟁META_FOLD⟁"
+    },
+    "forbidden_folds": ["⟁CONTROL_FOLD⟁"],
+    "ui_write_forbidden": true,
+    "tick_monotone": true
+  },
+  "abi_hash_sha256": "sha256:973423e1784b17088e2d4a99eb9c42e526992ac6a96f3c6ec4c74cc81c65a7d2"
+}

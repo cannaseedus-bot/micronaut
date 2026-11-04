@@ -1,0 +1,12 @@
+{
+  "fel": {
+    "v": "fel.v1.1",
+    "canonical_id": "asx://language/fel/v1.1",
+    "schema_id": "kuhul://schema/fel/v1.1"
+  },
+  "expected_hashes": {
+    "replay_0001.svg.sha256": "e8edaf215e90f554d0207f2228abf2afab3c96b002c76a8202cbcb5667ad3dff",
+    "scx2.bin.sha256": "2abe3abed92521b0404761638dc102dd151ef0dc85d5bd8938f6adbb3271b4bc"
+  },
+  "abi_hash_sha256": "sha256:973423e1784b17088e2d4a99eb9c42e526992ac6a96f3c6ec4c74cc81c65a7d2"
+}

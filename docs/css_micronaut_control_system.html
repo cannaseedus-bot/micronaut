@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Micronaut Control System | Compression Universe</title>
+    <link rel="stylesheet" href="./capability-registry.css">
+    <link rel="stylesheet" href="./db.css">
+    <style>
+        /* CSS MICRONAUT CONTROL VECTORS */
+        :root {
+            --compression-level: 94.1%;
+            --execution-speed: 0.2ms;
+            --universe-scale: 1;
+            --data-flow: normal;
+            --logic-execution: running;
+            --pattern-recognition: active;
+        }
+
+        /* Micronaut Control Classes */
+        .micronaut-db-master {
+            --control-vector: storage;
+            --operation-mode: data-unfolding;
+            --compression-target: database;
+            --agent-id: "micronaut-db-master";
+            --agent-vector: storage;
+            --agent-domain: database;
+            --agent-can-emit: delta;
+            --agent-can-request: seal;
+            --agent-can-call: "⟁MATH:CLAMP ⟁MATH:LERP ⟁SHEET:AIML";
+            --agent-can-chain: "micronaut-vector-ctrl micronaut-ast-gen micronaut-code-exec";
+        }
+
+        .micronaut-code-exec {
+            --control-vector: execution;
+            --operation-mode: logic-unfolding;
+            --compression-target: code;
+            --agent-id: "micronaut-code-exec";
+            --agent-vector: execution;
+            --agent-domain: code;
+            --agent-can-emit: delta;
+            --agent-can-request: seal;
+            --agent-can-call: "⟁MATH:ADD ⟁MATH:MUL ⟁MATH:DIV ⟁MATH:CLAMP";
+            --agent-can-chain: "micronaut-vector-ctrl micronaut-db-master";
+        }
+
+        .micronaut-lang-parse {
+            --control-vector: parsing;
+            --operation-mode: syntax-unfolding;
+            --compression-target: language;
+            --agent-id: "micronaut-lang-parse";
+            --agent-vector: parsing;
+            --agent-domain: language;
+            --agent-can-emit: delta;
+            --agent-can-request: seal;
+            --agent-can-call: "⟁SHEET:AIML";
+            --agent-can-chain: "micronaut-pattern-match";
+        }
+
+        .micronaut-pattern-match {
+            --control-vector: analysis;
+            --operation-mode: pattern-recognition;
+            --compression-target: patterns;
+            --agent-id: "micronaut-pattern-match";
+            --agent-vector: analysis;
+            --agent-domain: patterns;
+            --agent-can-emit: delta;
+            --agent-can-request: seal;
+            --agent-can-call: "⟁SHEET:AIML";
+            --agent-can-chain: "micronaut-lang-parse micronaut-db-master";
+        }
+
+        .micronaut-ast-gen {
+            --control-vector: generation;
+            --operation-mode: tree-building;
+            --compression-target: ast;
+            --agent-id: "micronaut-ast-gen";
+            --agent-vector: generation;
+            --agent-domain: ast;
+            --agent-can-emit: delta;
+            --agent-can-request: seal;
+            --agent-can-call: "⟁MATH:CLAMP ⟁MATH:LERP ⟁MATH:NORM ⟁FN:COMPOSE ⟁GRAPH:TOPO";
+            --agent-can-chain: "micronaut-code-exec micronaut-vector-ctrl";
+        }
+
+        .micronaut-vector-ctrl {
+            --control-vector: coordination;
+            --operation-mode: flow-management;
+            --compression-target: universe;
+            --agent-id: "micronaut-vector-ctrl";
+            --agent-vector: coordination;
+            --agent-domain: universe;
+            --agent-can-emit: delta;
+            --agent-can-request: attest;
+            --agent-can-call: "⟁MATH:CLAMP ⟁MATH:NORM ⟁GRAPH:BFS ⟁GRAPH:DIJKSTRA ⟁SHEET:CSS ⟁SHEET:GRAPH";
+            --agent-can-chain: "*";
+        }
+
+        /* Compression State Classes */
+        .compression-active {
+            --compression-state: active;
+            --efficiency: 94.1%;
+            animation: compress-pulse 2s infinite;
+        }
+
+        .compression-optimized {
+            --compression-state: optimized;
+            --efficiency: 97.3%;
+            animation: optimize-glow 3s infinite;
+        }
+
+        .compression-maximum {
+            --compression-state: maximum;
+            --efficiency: 99.8%;
+            animation: compression-oscillate 1s infinite;
+        }
+
+        /* Animation Keyframes for Compression */
+        @keyframes compress-pulse {
+            0%, 100% { --compression-intensity: 0.7; }
+            50% { --compression-intensity: 1; }
+        }
+
+        @keyframes optimize-glow {
+            0%, 100% {
+                --compression-glow: 0;
+                filter: drop-shadow(0 0 5px rgba(22, 242, 170, 0.3));
+            }
+            50% {
+                --compression-glow: 1;
+                filter: drop-shadow(0 0 20px rgba(22, 242, 170, 0.8));
+            }
+        }
+
+        @keyframes compression-oscillate {
+            0%, 100% { --compression-state-step: 0; }
+            25% { --compression-state-step: 0.25; }
+            50% { --compression-state-step: 0.5; }
+            75% { --compression-state-step: 0.75; }
+        }
+
+        /* Base Styles */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #0a0a1a;
+            color: #e9f5ff;
+            font-family: "Courier New", monospace;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            padding: 40px 0;
+            border-bottom: 1px solid rgba(22, 242, 170, 0.3);
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #16f2aa;
+            letter-spacing: 4px;
+            margin-bottom: 15px;
+            text-shadow: 0 0 20px rgba(22, 242, 170, 0.5);
+        }
+
+        .subtitle {
+            color: #00e0ff;
+            font-size: 1.3rem;
+            letter-spacing: 2px;
+        }
+
+        /* Grid System */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        /* Cards */
+        .card {
+            background: #070b12;
+            border: 1px solid rgba(22, 242, 170, 0.2);
+            border-radius: 15px;
+            padding: 30px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            border-color: #16f2aa;
+            box-shadow: 0 0 25px rgba(22, 242, 170, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .card-title {
+            color: #16f2aa;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgba(22, 242, 170, 0.3);
+            padding-bottom: 10px;
+        }
+
+        /* Code Blocks */
+        .code-block {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+            font-size: 0.9rem;
+            overflow-x: auto;
+            border-left: 3px solid #16f2aa;
+            white-space: pre-wrap;
+        }
+
+        /* Micronaut Control Panel */
+        .micronaut-panel {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .micronaut-card {
+            background: rgba(22, 242, 170, 0.05);
+            border: 1px solid rgba(22, 242, 170, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .micronaut-card.active {
+            background: rgba(22, 242, 170, 0.15);
+            border-color: #16f2aa;
+            box-shadow: 0 0 15px rgba(22, 242, 170, 0.4);
+        }
+
+        .micronaut-icon {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #9966ff;
+        }
+
+        .micronaut-name {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #16f2aa;
+        }
+
+        .micronaut-status,
+        .micronaut-vector {
+            font-size: 0.8rem;
+            color: #7b8a9a;
+        }
+
+        /* Compression Visualization */
+        .compression-visual {
+            height: 200px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            margin: 20px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .compression-wave {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(22, 242, 170, 0.1), transparent);
+        }
+
+        .compression-particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: #16f2aa;
+            border-radius: 50%;
+            opacity: 0.7;
+        }
+
+        /* Control Interface */
+        .control-interface {
+            display: flex;
+            gap: 10px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .control-btn {
+            background: rgba(22, 242, 170, 0.1);
+            border: 1px solid #16f2aa;
+            color: #e9f5ff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: "Courier New", monospace;
+            transition: all 0.3s ease;
+        }
+
+        .control-btn:hover {
+            background: rgba(22, 242, 170, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .control-btn:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .capability-console-card { margin: 24px 0; }
+        .capability-console-card p { color: #9eb0c2; line-height: 1.55; }
+        .capability-examples { display:flex; flex-wrap:wrap; gap:8px; margin:14px 0; }
+        .capability-button { border:1px solid rgba(34,242,179,.4); background:#09251f; color:#dffdf3; border-radius:8px; padding:9px 12px; cursor:pointer; }
+        .capability-button:hover { background:#103b31; }
+        .capability-output { min-height:110px; max-height:280px; overflow:auto; white-space:pre-wrap; overflow-wrap:anywhere; }
+        .capability-declarations { position:absolute; width:0; height:0; overflow:hidden; }
+
+        /* Metrics Display */
+        .metrics-display {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .metric-card {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .metric-value {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #16f2aa;
+            margin-bottom: 5px;
+            word-break: break-all;
+        }
+
+        .metric-label {
+            font-size: 0.9rem;
+            color: #7b8a9a;
+        }
+
+        .status-pill {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            border: 1px solid rgba(22, 242, 170, 0.4);
+            color: #16f2aa;
+        }
+
+        .status-pill.offline {
+            border-color: rgba(255, 96, 96, 0.4);
+            color: #ff6060;
+        }
+
+        .svg-panel {
+            background: rgba(0, 0, 0, 0.35);
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        #svgHost svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>CSS Micronaut Control System</h1>
+            <div class="subtitle">Compression Universe Management via CSS Control Vectors</div>
+        </div>
+
+        <div class="grid">
+            <!-- Compression Universe -->
+            <div class="card">
+                <div class="card-title">🌌 Compression Universe</div>
+                <p>Everything compressed to symbolic representation with CSS-controlled Micronauts.</p>
+
+                <div class="code-block">
+// CSS-Controlled Compression
+.universe {
+  --compression-state: active;
+  --data-flow: optimized;
+  --micronaut-control: vector-based;
+}
+
+.data-compression {
+  compression-ratio: var(--compression-level);
+  execution-speed: var(--execution-speed);
+}
+
+.micronaut-db-master {
+  --control-vector: storage;
+  --operation: data-unfolding;
+}
+                </div>
+
+                <div class="micronaut-panel" id="micronautPanel">
+                    <!-- Micronauts will be added here by JS -->
+                </div>
+            </div>
+
+            <!-- CSS Control Vectors -->
+            <div class="card">
+                <div class="card-title">🎛️ CSS Control Vectors</div>
+                <p>CSS custom properties as control mechanisms for compression operations.</p>
+
+                <div class="control-interface">
+                    <button class="control-btn" data-action="compression" data-agent-class="micronaut-vector-ctrl" data-value="active">Activate Compression</button>
+                    <button class="control-btn" data-action="compression" data-agent-class="micronaut-vector-ctrl" data-value="optimized">Optimize Flow</button>
+                    <button class="control-btn" data-action="compression" data-agent-class="micronaut-vector-ctrl" data-value="maximum">Maximum Compression</button>
+                    <button class="control-btn" data-action="compression" data-agent-class="micronaut-vector-ctrl" data-value="active">Reset System</button>
+                </div>
+
+                <div class="compression-visual" id="compressionVisual">
+                    <div class="compression-wave"></div>
+                    <!-- Particles will be added by JS -->
+                </div>
+
+                <div class="metrics-display">
+                    <div class="metric-card">
+                        <div class="metric-value" id="efficiencyValue">—</div>
+                        <div class="metric-label">Compression Efficiency</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value" id="speedValue">—</div>
+                        <div class="metric-label">Execution Speed</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value" id="memoryValue">—</div>
+                        <div class="metric-label">Memory Usage</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Live Compression Control -->
+        <div class="card">
+            <div class="card-title">🎮 Live Compression Control</div>
+
+            <div class="control-interface">
+                <button class="control-btn" data-action="domain" data-agent-class="micronaut-db-master" data-value="database">Database Compression</button>
+                <button class="control-btn" data-action="domain" data-agent-class="micronaut-code-exec" data-value="code">Code Compression</button>
+                <button class="control-btn" data-action="domain" data-agent-class="micronaut-lang-parse" data-value="language">Language Compression</button>
+                <button class="control-btn" data-action="domain" data-agent-class="micronaut-pattern-match" data-value="patterns">Pattern Recognition</button>
+            </div>
+
+            <div class="code-block" id="liveOutput">
+                // Awaiting verified state...
+            </div>
+        </div>
+
+        <section class="card capability-console-card" id="capability-console" data-asx-key="⟁CAPABILITY:CONSOLE">
+            <div class="card-title">⟁ Capability Console</div>
+            <p>CSS declares capability IDs and contracts. The local JavaScript registry supplies the fixed implementations. Declaration expressions are never evaluated as code.</p>
+            <p id="capability-status" role="status">Loading capability manifest…</p>
+            <div id="capability-examples" class="capability-examples" aria-label="Math examples"></div>
+            <div id="capability-graph" class="capability-examples" aria-label="Graph examples">
+                <button class="capability-button" type="button" data-graph="BFS">BFS from A</button>
+                <button class="capability-button" type="button" data-graph="DFS">DFS from A</button>
+                <button class="capability-button" type="button" data-graph="DIJKSTRA">Dijkstra A → D</button>
+                <button class="capability-button" type="button" data-graph="CYCLE">Detect cycle</button>
+                <button class="capability-button" type="button" data-graph="LAYOUT2D">Project 2D topology</button>
+            </div>
+            <div class="capability-examples" aria-label="Reference sheets">
+                <button class="capability-button" type="button" data-sheet="css">Sheet: CSS</button>
+                <button class="capability-button" type="button" data-sheet="aiml">Sheet: AIML</button>
+                <button class="capability-button" type="button" data-sheet="math">Sheet: Math</button>
+                <button class="capability-button" type="button" data-sheet="graph">Sheet: Graph</button>
+                <button class="capability-button" type="button" data-sheet="db">DB schema keys</button>
+                <button class="capability-button" type="button" id="capability-agent-call">DB → clamp → vector handoff proposal</button>
+            </div>
+            <pre class="code-block capability-output" id="capability-output" aria-live="polite">Capability results appear here.</pre>
+            <h3>Agent chain · local replay and attestation</h3>
+            <p>Every handoff and capability call is checked against the agent CSS and manifest. SHA-256 identifies the canonical trace; replay verification is local and does not grant XCFE admission.</p>
+            <div id="agent-chain-examples" class="capability-examples">
+                <button class="capability-button" type="button" data-chain="ast-clamp-norm">AST → clamp → code → vector → DB sheet</button>
+                <button class="capability-button" type="button" data-chain="exec-vector">Code → arithmetic → vector</button>
+                <button class="capability-button" type="button" data-chain="vector-graph">Vector → BFS → AST</button>
+            </div>
+            <div class="metrics-display">
+                <div class="metric-card"><div class="metric-value" id="chain-value">—</div><div class="metric-label">Final value</div></div>
+                <div class="metric-card"><div class="metric-value" id="chain-steps">—</div><div class="metric-label">Trace records</div></div>
+                <div class="metric-card"><div class="metric-value" id="chain-attestation">—</div><div class="metric-label">Local SHA-256</div></div>
+            </div>
+            <pre class="code-block capability-output" id="chain-output" aria-live="polite">No chain has run.</pre>
+            <p>Agent handoff displays a candidate proposal only. It does not invoke the target agent, grant XCFE authority, or mark a verified tick.</p>
+            <div class="capability-graph-demo" aria-hidden="true"></div>
+        </section>
+
+        <div class="grid">
+            <div class="card">
+                <div class="card-title">🧾 Verifier Proof HUD</div>
+                <p>UI reflects verified state roots and projection hashes.</p>
+
+                <div class="metrics-display">
+                    <div class="metric-card">
+                        <div class="metric-value" id="stateRoot">—</div>
+                        <div class="metric-label">State Root SHA256</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value" id="svgHash">—</div>
+                        <div class="metric-label">SVG SHA256</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value" id="svgStreamHash">—</div>
+                        <div class="metric-label">SVG Stream SHA256</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value" id="attestationHash">—</div>
+                        <div class="metric-label">Attestation SHA256</div>
+                    </div>
+                </div>
+
+                <div class="metrics-display">
+                    <div class="metric-card">
+                        <div class="metric-value" id="tickValue">—</div>
+                        <div class="metric-label">Verified Tick</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value"><span class="status-pill offline" id="wsStatus">offline</span></div>
+                        <div class="metric-label">WebSocket Status</div>
+                    </div>
+                </div>
+
+                <div class="svg-panel">
+                    <div id="svgHost">SVG projection will render here.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const WS_URL = "ws://localhost:8765";
+        const SESSION_ID = "sess_demo";
+
+        class CSSMicronautControl {
+            constructor() {
+                this.micronauts = [
+                    {
+                        id: "db-master",
+                        name: "DB Master µ",
+                        icon: "🗄️",
+                        status: "Pending",
+                        vector: "storage",
+                        cssClass: "micronaut-db-master",
+                    },
+                    {
+                        id: "code-exec",
+                        name: "Code Exec µ",
+                        icon: "⚡",
+                        status: "Pending",
+                        vector: "execution",
+                        cssClass: "micronaut-code-exec",
+                    },
+                    {
+                        id: "lang-parse",
+                        name: "Lang Parse µ",
+                        icon: "🔤",
+                        status: "Pending",
+                        vector: "parsing",
+                        cssClass: "micronaut-lang-parse",
+                    },
+                    {
+                        id: "pattern-match",
+                        name: "Pattern Match µ",
+                        icon: "🔍",
+                        status: "Pending",
+                        vector: "analysis",
+                        cssClass: "micronaut-pattern-match",
+                    },
+                    {
+                        id: "ast-gen",
+                        name: "AST Gen µ",
+                        icon: "🌳",
+                        status: "Pending",
+                        vector: "generation",
+                        cssClass: "micronaut-ast-gen",
+                    },
+                    {
+                        id: "vector-ctrl",
+                        name: "Vector Ctrl µ",
+                        icon: "🎮",
+                        status: "Pending",
+                        vector: "coordination",
+                        cssClass: "micronaut-vector-ctrl",
+                    },
+                ];
+
+                this.nextTick = 0;
+                this.socket = null;
+
+                this.init();
+            }
+
+            init() {
+                this.renderMicronauts();
+                this.setupEventListeners();
+                this.startCompressionVisualization();
+                this.connect();
+            }
+
+            connect() {
+                const statusEl = document.getElementById("wsStatus");
+                try {
+                    this.socket = new WebSocket(WS_URL);
+                } catch (error) {
+                    this.log(`[ws] failed to construct: ${error}`);
+                    return;
+                }
+
+                this.socket.addEventListener("open", () => {
+                    statusEl.textContent = "online";
+                    statusEl.classList.remove("offline");
+                    this.log("[ws] connected");
+                    this.setButtonsEnabled(true);
+                });
+
+                this.socket.addEventListener("close", () => {
+                    statusEl.textContent = "offline";
+                    statusEl.classList.add("offline");
+                    this.log("[ws] closed");
+                    this.setButtonsEnabled(false);
+                });
+
+                this.socket.addEventListener("error", () => {
+                    statusEl.textContent = "offline";
+                    statusEl.classList.add("offline");
+                    this.log("[ws] error");
+                    this.setButtonsEnabled(false);
+                });
+
+                this.socket.addEventListener("message", (event) => {
+                    const msg = JSON.parse(event.data);
+                    if (msg.type === "verified") {
+                        this.applyVerified(msg);
+                    } else if (msg.type === "error") {
+                        this.log(`[error] ${msg.error}`);
+                    }
+                });
+            }
+
+            setButtonsEnabled(enabled) {
+                document.querySelectorAll(".control-btn").forEach((btn) => {
+                    btn.disabled = !enabled;
+                });
+            }
+
+            renderMicronauts() {
+                const panel = document.getElementById("micronautPanel");
+                panel.innerHTML = "";
+
+                this.micronauts.forEach((micronaut) => {
+                    const card = document.createElement("div");
+                    card.className = `micronaut-card ${micronaut.cssClass}`;
+                    card.id = `micronaut-${micronaut.id}`;
+                    card.innerHTML = `
+                        <div class="micronaut-icon">${micronaut.icon}</div>
+                        <div class="micronaut-name">${micronaut.name}</div>
+                        <div class="micronaut-status">${micronaut.status}</div>
+                        <div class="micronaut-vector">Vector: ${micronaut.vector}</div>
+                    `;
+                    panel.appendChild(card);
+                    const agentLine = document.createElement("div");
+                    agentLine.className = "micronaut-vector";
+                    agentLine.textContent = `Agent: ${this.getAgentId(card) || "declared"}`;
+                    card.appendChild(agentLine);
+                });
+            }
+
+            setupEventListeners() {
+                document.querySelectorAll(".control-btn[data-action]").forEach((button) => {
+                    button.addEventListener("click", () => {
+                        const action = button.dataset.action;
+                        const agentClass = button.dataset.agentClass;
+                        const value = button.dataset.value;
+                        if (!agentClass || !value) {
+                            this.log("[intent] missing agent metadata");
+                            return;
+                        }
+                        if (action === "compression") {
+                            this.emitCompressionState(agentClass, value);
+                        } else if (action === "domain") {
+                            this.emitDomainControl(agentClass, value);
+                        }
+                    });
+                });
+            }
+
+            emitCompressionState(agentClass, state) {
+                this.emitDelta(agentClass, {
+                    op: "replace",
+                    path: "/ui/compression_state",
+                    value: state,
+                });
+            }
+
+            emitDomainControl(agentClass, domain) {
+                this.emitDelta(agentClass, {
+                    op: "replace",
+                    path: "/ui/last_domain_request",
+                    value: domain,
+                });
+            }
+
+            emitDelta(agentClass, patch) {
+                if (!this.socket || this.socket.readyState !== WebSocket.OPEN) {
+                    this.log("[ws] not connected; cannot emit");
+                    return;
+                }
+                const agentId = this.getAgentIdByClass(agentClass);
+                if (!agentId) {
+                    this.log("[intent] missing agent-id");
+                    return;
+                }
+                const fel = {
+                    v: "fel.v1.1",
+                    tick: this.nextTick,
+                    type: "delta",
+                    fold: "⟁STATE_FOLD⟁",
+                    source_agent: agentId,
+                    requires_proof: true,
+                    patch,
+                };
+                this.nextTick += 1;
+
+                const payload = {
+                    v: "micronaut.ws.v1",
+                    type: "intent",
+                    session: SESSION_ID,
+                    agent_id: agentId,
+                    fel,
+                };
+                this.socket.send(JSON.stringify(payload));
+                this.log(`[intent] ${agentId} → ${patch.path}=${patch.value}`);
+            }
+
+            getAgentId(card) {
+                if (!card) {
+                    return "";
+                }
+                const styles = getComputedStyle(card);
+                return this.cleanCssString(styles.getPropertyValue("--agent-id"));
+            }
+
+            getAgentIdByClass(agentClass) {
+                const card = document.querySelector(`.${agentClass}`);
+                return this.getAgentId(card);
+            }
+
+            cleanCssString(value) {
+                return value.replace(/["']/g, "").trim();
+            }
+
+            applyVerified(msg) {
+                const state = msg.state || {};
+                const proof = msg.proof || {};
+
+                const mode = state?.ui?.compression_state || "active";
+                document.body.classList.remove(
+                    "compression-active",
+                    "compression-optimized",
+                    "compression-maximum"
+                );
+                document.body.classList.add(`compression-${mode}`);
+
+                const eff = state?.metrics?.efficiency;
+                const spd = state?.metrics?.speed_ms;
+                const mem = state?.metrics?.memory_kb;
+
+                document.getElementById("efficiencyValue").textContent =
+                    eff != null ? `${eff}%` : "—";
+                document.getElementById("speedValue").textContent =
+                    spd != null ? `${spd}ms` : "—";
+                document.getElementById("memoryValue").textContent =
+                    mem != null ? `${mem}KB` : "—";
+
+                document.getElementById("stateRoot").textContent = proof.state_root_sha256 || "—";
+                document.getElementById("svgHash").textContent = proof.svg_sha256 || "—";
+                document.getElementById("svgStreamHash").textContent =
+                    proof.svg_stream_sha256 || "—";
+                document.getElementById("attestationHash").textContent =
+                    proof.attestation_sha256 || "—";
+                document.getElementById("tickValue").textContent = msg.tick ?? "—";
+
+                this.updateMicronautStatus(state);
+
+                const svgHost = document.getElementById("svgHost");
+                if (svgHost && msg.svg) {
+                    svgHost.innerHTML = msg.svg;
+                }
+
+                this.log(
+                    `[verified tick=${msg.tick}] state=${(proof.state_root_sha256 || "").slice(0, 16)} svg=${
+                        (proof.svg_sha256 || "").slice(0, 16)
+                    } stream=${(proof.svg_stream_sha256 || "").slice(0, 16)}`
+                );
+            }
+
+            updateMicronautStatus(state) {
+                const activeVectors = state?.ui?.micronaut_vectors || [];
+                this.micronauts.forEach((micronaut) => {
+                    const card = document.getElementById(`micronaut-${micronaut.id}`);
+                    if (!card) {
+                        return;
+                    }
+                    const isActive = activeVectors.includes(micronaut.vector);
+                    card.classList.toggle("active", isActive);
+                    const statusEl = card.querySelector(".micronaut-status");
+                    if (statusEl) {
+                        statusEl.textContent = isActive ? "Verified" : "Idle";
+                    }
+                });
+            }
+
+            startCompressionVisualization() {
+                const visual = document.getElementById("compressionVisual");
+
+                for (let i = 0; i < 30; i += 1) {
+                    const particle = document.createElement("div");
+                    particle.className = "compression-particle";
+
+                    const left = Math.random() * 100;
+                    const bottom = Math.random() * 100;
+
+                    particle.style.left = `${left}%`;
+                    particle.style.bottom = `${bottom}%`;
+
+                    const duration = 2 + Math.random() * 3;
+                    const delay = Math.random() * 5;
+
+                    particle.style.animation = `float ${duration}s ${delay}s infinite ease-in-out`;
+
+                    visual.appendChild(particle);
+                }
+
+                const style = document.createElement("style");
+                style.textContent = `
+                    @keyframes float {
+                        0%, 100% { transform: translateY(0) scale(1); opacity: 0.7; }
+                        50% { transform: translateY(-20px) scale(1.2); opacity: 1; }
+                    }
+                `;
+                document.head.appendChild(style);
+            }
+
+            log(message) {
+                const output = document.getElementById("liveOutput");
+                const timestamp = new Date().toLocaleTimeString();
+                output.textContent = `// [${timestamp}] ${message}\n${output.textContent}`;
+
+                const lines = output.textContent.split("\n");
+                if (lines.length > 10) {
+                    output.textContent = lines.slice(0, 10).join("\n");
+                }
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            window.cssMicronautControl = new CSSMicronautControl();
+        });
+    </script>
+    <script type="module" src="./capability-console.js"></script>
+</body>
+</html>
